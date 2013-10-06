@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74F144CF1801B54600FBC10B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144CE1801B54600FBC10B /* UIKit.framework */; };
+		74F144D11801B54600FBC10B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144D01801B54600FBC10B /* Foundation.framework */; };
+		74F144D31801B54600FBC10B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144D21801B54600FBC10B /* CoreGraphics.framework */; };
+		74F144D91801B54600FBC10B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74F144D71801B54600FBC10B /* InfoPlist.strings */; };
+		74F144DB1801B54600FBC10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F144DA1801B54600FBC10B /* main.m */; };
+		74F144DF1801B54600FBC10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F144DE1801B54600FBC10B /* AppDelegate.m */; };
+		74F144E11801B54600FBC10B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F144E01801B54600FBC10B /* Default.png */; };
+		74F144E31801B54600FBC10B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F144E21801B54600FBC10B /* Default@2x.png */; };
+		74F144E51801B54600FBC10B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F144E41801B54600FBC10B /* Default-568h@2x.png */; };
+		74F144ED1801B54700FBC10B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144EC1801B54700FBC10B /* SenTestingKit.framework */; };
+		74F144EE1801B54700FBC10B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144CE1801B54600FBC10B /* UIKit.framework */; };
+		74F144EF1801B54700FBC10B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F144D01801B54600FBC10B /* Foundation.framework */; };
+		74F144F71801B54700FBC10B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74F144F51801B54700FBC10B /* InfoPlist.strings */; };
+		74F144FA1801B54700FBC10B /* MDM_AgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F144F91801B54700FBC10B /* MDM_AgentTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74F144F01801B54700FBC10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74F144C31801B54600FBC10B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74F144CA1801B54600FBC10B;
+			remoteInfo = "MDM Agent";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74F144CB1801B54600FBC10B /* MDM Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDM Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F144CE1801B54600FBC10B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74F144D01801B54600FBC10B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74F144D21801B54600FBC10B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74F144D61801B54600FBC10B /* MDM Agent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDM Agent-Info.plist"; sourceTree = "<group>"; };
+		74F144D81801B54600FBC10B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74F144DA1801B54600FBC10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74F144DC1801B54600FBC10B /* MDM Agent-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDM Agent-Prefix.pch"; sourceTree = "<group>"; };
+		74F144DD1801B54600FBC10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		74F144DE1801B54600FBC10B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74F144E01801B54600FBC10B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		74F144E21801B54600FBC10B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		74F144E41801B54600FBC10B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		74F144EB1801B54700FBC10B /* MDM AgentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MDM AgentTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F144EC1801B54700FBC10B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74F144F41801B54700FBC10B /* MDM AgentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDM AgentTests-Info.plist"; sourceTree = "<group>"; };
+		74F144F61801B54700FBC10B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74F144F81801B54700FBC10B /* MDM_AgentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDM_AgentTests.h; sourceTree = "<group>"; };
+		74F144F91801B54700FBC10B /* MDM_AgentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDM_AgentTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74F144C81801B54600FBC10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144CF1801B54600FBC10B /* UIKit.framework in Frameworks */,
+				74F144D11801B54600FBC10B /* Foundation.framework in Frameworks */,
+				74F144D31801B54600FBC10B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F144E71801B54700FBC10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144ED1801B54700FBC10B /* SenTestingKit.framework in Frameworks */,
+				74F144EE1801B54700FBC10B /* UIKit.framework in Frameworks */,
+				74F144EF1801B54700FBC10B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74F144C21801B54600FBC10B = {
+			isa = PBXGroup;
+			children = (
+				74F144D41801B54600FBC10B /* MDM Agent */,
+				74F144F21801B54700FBC10B /* MDM AgentTests */,
+				74F144CD1801B54600FBC10B /* Frameworks */,
+				74F144CC1801B54600FBC10B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74F144CC1801B54600FBC10B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74F144CB1801B54600FBC10B /* MDM Agent.app */,
+				74F144EB1801B54700FBC10B /* MDM AgentTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74F144CD1801B54600FBC10B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F144CE1801B54600FBC10B /* UIKit.framework */,
+				74F144D01801B54600FBC10B /* Foundation.framework */,
+				74F144D21801B54600FBC10B /* CoreGraphics.framework */,
+				74F144EC1801B54700FBC10B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74F144D41801B54600FBC10B /* MDM Agent */ = {
+			isa = PBXGroup;
+			children = (
+				74F144DD1801B54600FBC10B /* AppDelegate.h */,
+				74F144DE1801B54600FBC10B /* AppDelegate.m */,
+				74F144D51801B54600FBC10B /* Supporting Files */,
+			);
+			path = "MDM Agent";
+			sourceTree = "<group>";
+		};
+		74F144D51801B54600FBC10B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F144D61801B54600FBC10B /* MDM Agent-Info.plist */,
+				74F144D71801B54600FBC10B /* InfoPlist.strings */,
+				74F144DA1801B54600FBC10B /* main.m */,
+				74F144DC1801B54600FBC10B /* MDM Agent-Prefix.pch */,
+				74F144E01801B54600FBC10B /* Default.png */,
+				74F144E21801B54600FBC10B /* Default@2x.png */,
+				74F144E41801B54600FBC10B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74F144F21801B54700FBC10B /* MDM AgentTests */ = {
+			isa = PBXGroup;
+			children = (
+				74F144F81801B54700FBC10B /* MDM_AgentTests.h */,
+				74F144F91801B54700FBC10B /* MDM_AgentTests.m */,
+				74F144F31801B54700FBC10B /* Supporting Files */,
+			);
+			path = "MDM AgentTests";
+			sourceTree = "<group>";
+		};
+		74F144F31801B54700FBC10B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F144F41801B54700FBC10B /* MDM AgentTests-Info.plist */,
+				74F144F51801B54700FBC10B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74F144CA1801B54600FBC10B /* MDM Agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74F144FD1801B54700FBC10B /* Build configuration list for PBXNativeTarget "MDM Agent" */;
+			buildPhases = (
+				74F144C71801B54600FBC10B /* Sources */,
+				74F144C81801B54600FBC10B /* Frameworks */,
+				74F144C91801B54600FBC10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MDM Agent";
+			productName = "MDM Agent";
+			productReference = 74F144CB1801B54600FBC10B /* MDM Agent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74F144EA1801B54700FBC10B /* MDM AgentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74F145001801B54700FBC10B /* Build configuration list for PBXNativeTarget "MDM AgentTests" */;
+			buildPhases = (
+				74F144E61801B54700FBC10B /* Sources */,
+				74F144E71801B54700FBC10B /* Frameworks */,
+				74F144E81801B54700FBC10B /* Resources */,
+				74F144E91801B54700FBC10B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74F144F11801B54700FBC10B /* PBXTargetDependency */,
+			);
+			name = "MDM AgentTests";
+			productName = "MDM AgentTests";
+			productReference = 74F144EB1801B54700FBC10B /* MDM AgentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74F144C31801B54600FBC10B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = WSO2;
+			};
+			buildConfigurationList = 74F144C61801B54600FBC10B /* Build configuration list for PBXProject "MDM Agent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74F144C21801B54600FBC10B;
+			productRefGroup = 74F144CC1801B54600FBC10B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74F144CA1801B54600FBC10B /* MDM Agent */,
+				74F144EA1801B54700FBC10B /* MDM AgentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74F144C91801B54600FBC10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144D91801B54600FBC10B /* InfoPlist.strings in Resources */,
+				74F144E11801B54600FBC10B /* Default.png in Resources */,
+				74F144E31801B54600FBC10B /* Default@2x.png in Resources */,
+				74F144E51801B54600FBC10B /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F144E81801B54700FBC10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144F71801B54700FBC10B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74F144E91801B54700FBC10B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74F144C71801B54600FBC10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144DB1801B54600FBC10B /* main.m in Sources */,
+				74F144DF1801B54600FBC10B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74F144E61801B54700FBC10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F144FA1801B54700FBC10B /* MDM_AgentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74F144F11801B54700FBC10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74F144CA1801B54600FBC10B /* MDM Agent */;
+			targetProxy = 74F144F01801B54700FBC10B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74F144D71801B54600FBC10B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F144D81801B54600FBC10B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74F144F51801B54700FBC10B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F144F61801B54700FBC10B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74F144FB1801B54700FBC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74F144FC1801B54700FBC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74F144FE1801B54700FBC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDM Agent/MDM Agent-Prefix.pch";
+				INFOPLIST_FILE = "MDM Agent/MDM Agent-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74F144FF1801B54700FBC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDM Agent/MDM Agent-Prefix.pch";
+				INFOPLIST_FILE = "MDM Agent/MDM Agent-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74F145011801B54700FBC10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDM Agent.app/MDM Agent";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDM Agent/MDM Agent-Prefix.pch";
+				INFOPLIST_FILE = "MDM AgentTests/MDM AgentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74F145021801B54700FBC10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDM Agent.app/MDM Agent";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDM Agent/MDM Agent-Prefix.pch";
+				INFOPLIST_FILE = "MDM AgentTests/MDM AgentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74F144C61801B54600FBC10B /* Build configuration list for PBXProject "MDM Agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F144FB1801B54700FBC10B /* Debug */,
+				74F144FC1801B54700FBC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74F144FD1801B54700FBC10B /* Build configuration list for PBXNativeTarget "MDM Agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F144FE1801B54700FBC10B /* Debug */,
+				74F144FF1801B54700FBC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74F145001801B54700FBC10B /* Build configuration list for PBXNativeTarget "MDM AgentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F145011801B54700FBC10B /* Debug */,
+				74F145021801B54700FBC10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74F144C31801B54600FBC10B /* Project object */;
+}
