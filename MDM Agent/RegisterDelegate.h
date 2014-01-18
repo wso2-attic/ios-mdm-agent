@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResponseObject.h"
 
-@protocol RegisterDelegate <NSObject>
+@protocol RegisterDelegate
+
+- (void) didReceiveRegistration: (ResponseObject *) responseObject;
+- (void) registerFailedWithError: (ResponseObject *) responseObject;
 
 @end

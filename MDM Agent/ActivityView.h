@@ -10,4 +10,8 @@
 
 @interface ActivityView : UIView
 
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) UILabel *msgLabel;
+//@property (strong, nonatomic) UIView *backgroundView;
+
 @end

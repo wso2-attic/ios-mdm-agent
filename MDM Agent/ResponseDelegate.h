@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResponseObject.h"
 
-@protocol ResponseDelegate <NSObject>
+@protocol ResponseDelegate
+
+- (void) licenseWithError : (ResponseObject *) responseObject;
+- (void) getLicense: (ResponseObject *) responseObject;
 
 @end

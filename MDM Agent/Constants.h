@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 WSO2. All rights reserved.
 //
 
-#ifndef MDM_Agent_Constants_h
-#define MDM_Agent_Constants_h
+#define SUCCESS_STATUS @"200"
 
 
 
-#endif
+#define ISREGISTERAPI @"IS_REGISTER";
+

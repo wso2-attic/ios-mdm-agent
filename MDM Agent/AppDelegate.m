@@ -8,14 +8,58 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate () <PushDelegate> {
+    ApiResponse *_manager;
+}
+@end
+
 @implementation AppDelegate
+@synthesize navController;
+@synthesize viewController;
+@synthesize unregisterViewController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+//    _manager = [[ApiResponse alloc] init];
+//    _manager.registerDelegate = self;
+//    _manager.responseDelegate = self;
+    
+    _manager = [[ApiResponse alloc] init];
+    _manager.pushDelegate = self;
+    
+    //[[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert];
+    [self registerForPushToken];
+    
+    [Settings copyResource];
+    
+    if ([Settings isDeviceRegistered]) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            unregisterViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController" bundle:nil];
+        } else {
+            unregisterViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController_iPad" bundle:nil];
+        }
+        navController = [[UINavigationController alloc] initWithRootViewController:unregisterViewController];
+    } else {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            viewController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:nil];
+        } else {
+            viewController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController_iPad" bundle:nil];
+        }
+        navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    }
+    
+    self.navController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navController.navigationBar.translucent = NO;
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = navController;
+    self.window.autoresizesSubviews = YES;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -45,5 +89,96 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+//- (void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+//    
+//}
+//
+//- (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+//    
+//}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {
+    
+    [self muteDevice];
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
+    
+    //Check if the UDID is stored
+    NSString *udid = [Settings getResourcePlist:DEVICE_UDID];
+    
+    if (udid != NULL) {
+        //Device is register in the server
+        NSString *token = [[[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
+        if (token != NULL) {
+            
+            NSString *prevToken = [Settings getResourcePlist:PUSH_TOKEN];
+            if (![prevToken isEqualToString:token] || ![Settings isPushedToServer]) {
+                //Save the new token and push it to the server
+                [Settings updatePlist:PUSH_TOKEN StringText:token];
+                [Settings updatePlist:PUSHTOKENTOSERVER StringText:@"FALSE"];
+                [_manager sendPushTokenToServer:token UDID:udid];
+            }
+        }
+    }
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
+	NSLog(@"Failed to get token, error: %@", error);
+}
+
+- (BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSString *udid = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [Settings updatePlist:DEVICE_UDID StringText:udid];
+    
+    [self registerForPushToken];
+    [self initLocation];
+    
+    return YES;
+}
+
+
+#pragma Delegate Methods
+- (void) onSuccessPushToken: (ResponseObject *) responseObject {
+    if (responseObject.isSuccess) {
+        [Settings updatePlist:PUSHTOKENTOSERVER StringText:@"TRUE"];
+    }
+}
+
+- (void) connectionError: (ResponseObject *) responseObject {
+    //Error Updating Push Token to server
+    [Settings updatePlist:PUSHTOKENTOSERVER StringText:@"FALSE"];
+}
+
+- (void) registerForPushToken {
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
+}
+
+- (void)muteDevice {
+    [[MPMusicPlayerController applicationMusicPlayer] setVolume:0];
+}
+
+- (void)initLocation {
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.distanceFilter = 100;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+	[_locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+	NSLog(@"Calling didFailWithError %@", [error localizedDescription]);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location updated %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    [_manager sendLocationToServer:newLocation];
+}
+
 
 @end

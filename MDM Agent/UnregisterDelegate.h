@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResponseObject.h"
 
-@protocol UnregisterDelegate <NSObject>
+@protocol UnregisterDelegate
+
+- (void) onSuccessUnregister: (ResponseObject *) responseObject;
+- (void) unregisterFailedWithError: (ResponseObject *) responseObject;
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResponseObject.h"
 
 @protocol PushDelegate <NSObject>
+
+- (void) onSuccessPushToken: (ResponseObject *) responseObject;
+- (void) connectionError: (ResponseObject *) responseObject;
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ResponseObject.h"
+#import "Settings.h"
 
 @interface ResponseBuilder : NSObject
+
+//+ (ResponseObject *)getStringFromJSON: (NSData *) data requestHeader: (NSString *) request;
++ (ResponseObject *) httpResponse: (NSURLResponse *) response body: (NSData *) data error: (NSError **) error requestHeader: (NSString *) request;
 
 @end

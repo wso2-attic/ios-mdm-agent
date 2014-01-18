@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ActivityView.h"
+#import "WelcomeViewController.h"
+#import "Settings.h"
+#import "ApiResponse.h"
+#import "UnregisterDelegate.h"
+#import "RegisterDelegate.h"
 
 @interface UnregisterViewController : UIViewController
+
+@property (nonatomic, assign) BOOL unregisterFailed;
+@property (nonatomic, assign) BOOL isPopToRoot;
+@property (strong, nonatomic) ActivityView *activityView;
+
+- (IBAction)unregister_btnact:(id)sender;
 
 @end
