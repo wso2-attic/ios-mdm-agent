@@ -18,17 +18,19 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter the MDM Server address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4">
-                    <rect key="frame" x="20" y="47" width="275" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Set your server address here to start registration, i.e. www.abc.com" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="none" adjustsFontSizeToFit="NO" id="4">
+                    <rect key="frame" x="126" y="71" width="517" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7">
-                    <rect key="frame" x="289" y="111" width="191" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Connect to Server">
+                    <rect key="frame" x="289" y="190" width="191" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <state key="normal" title="Start Registration">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -36,8 +38,8 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://" borderStyle="roundedRect" minimumFontSize="17" id="10">
-                    <rect key="frame" x="294" y="43" width="454" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="157" y="129" width="454" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
