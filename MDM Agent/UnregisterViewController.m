@@ -90,7 +90,14 @@
         [self.activityView removeFromSuperview];
     
         NSMutableArray *viewContArray = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];
-        WelcomeViewController *welcomeViewController = [[WelcomeViewController alloc] init];
+        
+        WelcomeViewController *welcomeViewController;
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            welcomeViewController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:nil];
+        } else {
+            welcomeViewController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController_iPad" bundle:nil];
+        }
+        
         [viewContArray replaceObjectAtIndex:0 withObject:welcomeViewController];
         [self.navigationController setViewControllers:viewContArray];
     

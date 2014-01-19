@@ -166,7 +166,8 @@
     
     if (uniqueID == NULL) {
         //iOS 7 - Device is not registered
-        [_manager getLicense];
+        //[_manager getLicense];
+        [self removeLoadScreen];
     } else {
         //below iOS 7 - check registration
         [_manager isRegistered:uniqueID];
@@ -181,7 +182,14 @@
     [Settings updatePlist:DEVICEREG StringText:@"TRUE"];
     
     NSMutableArray *viewContArray = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];
-    UnregisterViewController *uregViewController = [[UnregisterViewController alloc] init];
+    
+    
+    UnregisterViewController *uregViewController;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        uregViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController" bundle:nil];
+    } else {
+        uregViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController_iPad" bundle:nil];
+    }
     [viewContArray replaceObjectAtIndex:0 withObject:uregViewController];
     [self.navigationController setViewControllers:viewContArray];
     
@@ -224,7 +232,8 @@
             [self performSelectorOnMainThread:@selector(popToUnregister) withObject:nil waitUntilDone:NO];
         } else {
             //The device is not registered.. Display License Agreement
-            [_manager getLicense];
+            //[_manager getLicense];
+            [self performSelectorOnMainThread:@selector(removeLoadScreen) withObject:nil waitUntilDone:NO];
         }
     } else {
         [self registerFailedWithError:responseObject];
