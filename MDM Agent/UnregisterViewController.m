@@ -77,7 +77,7 @@
     [_manager unregisterFromMDM:uniqueDevice];
     self.unregisterFailed = FALSE;
     self.isPopToRoot = FALSE;
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(unregisteredSuccess:) userInfo:nil repeats:YES];
+    //[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(unregisteredSuccess:) userInfo:nil repeats:YES];
 
 }
 
@@ -154,7 +154,8 @@
 }
 
 - (void) onSuccessUnregister:(ResponseObject *) responseObject {
-    //do nothing
+    [Settings updatePlist:DEVICEREG StringText:@"FALSE"];
+    [self performSelectorOnMainThread:@selector(popToWelcomeScreen) withObject:nil waitUntilDone:NO];
 }
 
 @end

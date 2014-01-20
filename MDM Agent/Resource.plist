@@ -5,6 +5,6 @@
 	<key>Information</key>
 	<string>This is the Liense agreement statment. This is a sample test that will be view in the Text View.. This is a test application for the time being.</string>
 	<key>Server_url</key>
-	<string>10.10.10.92</string>
+	<string>ip</string>
 </dict>
 </plist>

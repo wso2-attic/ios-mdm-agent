@@ -17,6 +17,6 @@
 	<key>locationurl</key>
 	<string>/mdm/api/devices/location</string>
 	<key>loginurl</key>
-	<string>https://10.10.10.92:9443/mdm/api/device_enroll</string>
+	<string>https://ip:9443/mdm/certificate</string>
 </dict>
 </plist>
