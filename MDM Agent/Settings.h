@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define URL_PREFIX @"http://"
-#define PORT @":9763"
+#define URL_PREFIX @"https://"
+#define PORT @":9443"
 #define HTTP_REQUEST_TIME @"10.0"
 #define SUCCESS_STATUS @"200"
 #define RESOURCE_PLIST @"Resource"
@@ -26,6 +26,7 @@
 #define GETLICENSE @"getlicense"
 #define PUSHTOKENTOSERVER @"pushtokentoserver"
 #define LOCATIONURL @"locationurl"
+#define LOGINURL @"loginurl"
 
 #define FAILED @"FAILED"
 #define UNREGISTRATION @"UNREGISTRATION"

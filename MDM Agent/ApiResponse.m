@@ -14,10 +14,6 @@
 - (void) isRegistered: (NSString *) uniqueID {
     
     NSString *endpoint = [Settings getServerURL: ISREGISTERED];
-
-//    endpoint = @"http://192.168.18.57:9763/mdm/api/devices/isregistered";
-//    uniqueID = @"APA91bHpVpzRe0I1fk3G6hBj0WnIuKY-GMYlF7Cv5rcVhVPR8a5CPdKQE63NaizL3YJAf9E87qf1mfEpyW7GZmbKog4nNlK03ZGtX8uXG8cop5GBWdv08bPTeTxei-0POW6aC6FXyHGirwRjFEnKBAcQJmrVdjh8ng";
-    //endpoint = [endpoint stringByAppendingFormat:@"?regid=%@", uniqueID];
     
     NSURL *url = [NSURL URLWithString:endpoint];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:[HTTP_REQUEST_TIME floatValue]];
@@ -62,7 +58,7 @@
     //endpoint = [endpoint stringByAppendingFormat:@"?deviceID=%@", uniqueID];
     
     NSURL *url = [NSURL URLWithString:endpoint];
-    NSLog(@"unregister >>>>>>>>>>> %@", url);
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:[HTTP_REQUEST_TIME floatValue]];
     [request setHTTPMethod:@"POST"];
     NSString *postString = [@"udid=" stringByAppendingString:uniqueID];
