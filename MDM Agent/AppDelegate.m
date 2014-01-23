@@ -100,7 +100,16 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {
     
-    [self muteDevice];
+    NSDictionary *aps = [userInfo objectForKey:@"aps"];
+    
+    if (aps) {
+        NSString *alert = [aps objectForKey:@"alert"];
+        
+        if ([@"Device Muted" isEqualToString:alert]) {
+            [self muteDevice];
+        }
+    }
+    
 }
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
