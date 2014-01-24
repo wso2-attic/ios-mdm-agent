@@ -129,6 +129,7 @@
 //    [self updatePlist: @"Server_url" StringText:self.server_txt.text];
 //    [self isRegisteredDevice];
     
+    [self updatePlist: @"Server_url" StringText:self.server_txt.text];
     NSString *endpoint = [Settings getServerURL:LOGINURL];
     NSURL *loginURL = [[NSURL alloc] initWithString:endpoint];
     [[UIApplication sharedApplication] openURL:loginURL];
