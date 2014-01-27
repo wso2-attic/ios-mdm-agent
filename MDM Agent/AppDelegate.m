@@ -34,6 +34,12 @@
     
     [Settings copyResource];
     
+    [self showMainWindow];
+    
+    return YES;
+}
+
+- (void)showMainWindow {
     if ([Settings isDeviceRegistered]) {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             unregisterViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController" bundle:nil];
@@ -59,8 +65,6 @@
     self.window.rootViewController = navController;
     self.window.autoresizesSubviews = YES;
     [self.window makeKeyAndVisible];
-    
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -77,6 +81,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [self showMainWindow];
+    
     if([Settings getResourcePlist:PUSH_TOKEN] && [Settings getResourcePlist:DEVICE_UDID]) {
         [_manager sendPushTokenToServer:[Settings getResourcePlist:PUSH_TOKEN] UDID:[Settings getResourcePlist:DEVICE_UDID]];
     }
