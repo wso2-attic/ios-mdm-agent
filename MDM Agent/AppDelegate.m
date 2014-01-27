@@ -34,6 +34,12 @@
     
     [Settings copyResource];
     
+    [self showMainWindow];
+    
+    return YES;
+}
+
+- (void)showMainWindow {
     if ([Settings isDeviceRegistered]) {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             unregisterViewController = [[UnregisterViewController alloc] initWithNibName:@"UnregisterViewController" bundle:nil];
@@ -59,8 +65,6 @@
     self.window.rootViewController = navController;
     self.window.autoresizesSubviews = YES;
     [self.window makeKeyAndVisible];
-    
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -77,7 +81,13 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self showMainWindow];
+    
+    if([Settings getResourcePlist:PUSH_TOKEN] && [Settings getResourcePlist:DEVICE_UDID]) {
+        [_manager sendPushTokenToServer:[Settings getResourcePlist:PUSH_TOKEN] UDID:[Settings getResourcePlist:DEVICE_UDID]];
+    }
+    
+    [self initLocation];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

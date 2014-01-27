@@ -33,6 +33,7 @@
 #define ISDEVICEREGISTERED @"ISDEVICEREGISTERED"
 #define LICENSE @"LICENSE"
 #define SERVERPUSHTOKEN @"SERVERPUSHTOKEN"
+#define UNREGISTERSUCCESS @"UNREGISTERSUCCESS"
 
 #define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define DEVICE_UDID @"UDID"
