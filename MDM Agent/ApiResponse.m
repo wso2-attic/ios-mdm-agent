@@ -71,6 +71,8 @@
         } else {
             //[self.unregisterDelegate onSuccessUnregister:[ResponseBuilder getStringFromJSON:data requestHeader:UNREGISTRATION]];
             [self.unregisterDelegate onSuccessUnregister:[ResponseBuilder httpResponse:response body:data error:&error requestHeader:UNREGISTRATION]];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:UNREGISTERSUCCESS object:self];
         }
     }];
 }

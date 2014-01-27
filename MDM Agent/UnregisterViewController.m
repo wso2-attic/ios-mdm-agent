@@ -32,12 +32,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(unregisterSuccess) name:UNREGISTERSUCCESS object:nil];
+    
     // Do any additional setup after loading the view from its nib.
     _manager = [[ApiResponse alloc] init];
     _manager.unregisterDelegate = self;
     _manager.registerDelegate = self;
     
     self.activityView = [[ActivityView alloc] init];
+}
+
+- (void)viewDidUnload {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,7 +85,6 @@
     [_manager unregisterFromMDM:uniqueDevice];
     self.unregisterFailed = FALSE;
     self.isPopToRoot = FALSE;
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(unregisteredSuccess:) userInfo:nil repeats:YES];
 
 }
 
@@ -105,18 +112,16 @@
     }
 }
 
-- (void) unregisteredSuccess: (NSTimer *) timer {
+- (void) unregisterSuccess {
     if (![self unregisterFailed]) {
         if (![Settings isDeviceRegistered]) {
             //Device is unregistered
-            [timer invalidate];
             [self performSelectorOnMainThread:@selector(popToWelcomeScreen) withObject:nil waitUntilDone:NO];
         } else {
             [_manager isRegistered:[Settings getDeviceUnique]];
         }
     } else {
         //Unregister failed
-        [timer invalidate];
         [self performSelectorOnMainThread:@selector(displayErrorMsgOnMain) withObject:nil waitUntilDone:NO];
     }
 }
