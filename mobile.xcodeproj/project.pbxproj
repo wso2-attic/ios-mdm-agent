@@ -20,6 +20,7 @@
 		7494A6A31803BFB400B1224A /* WebViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7494A6A21803BFB400B1224A /* WebViewController_iPad.xib */; };
 		749A066818055A3E00DF8C27 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 749A066718055A3D00DF8C27 /* app_icon.png */; };
 		749A066A18055A4100DF8C27 /* app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 749A066918055A4100DF8C27 /* app_icon@2x.png */; };
+		74D9561618A0A1A80088FDC4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D9561518A0A1A80088FDC4 /* Default-568h@2x.png */; };
 		74E941281802698100F03D02 /* Resource.plist in Sources */ = {isa = PBXBuildFile; fileRef = 74ECDA1C1801C018005B001B /* Resource.plist */; };
 		74EA6F1918031F5700249B58 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA6F1818031F5600249B58 /* ActivityView.m */; };
 		74ECDA1D1801C018005B001B /* Resource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74ECDA1C1801C018005B001B /* Resource.plist */; };
@@ -73,6 +74,7 @@
 		7494A6A41803C5D700B1224A /* RegisterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterDelegate.h; sourceTree = "<group>"; };
 		749A066718055A3D00DF8C27 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = ../app_icon.png; sourceTree = "<group>"; };
 		749A066918055A4100DF8C27 /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app_icon@2x.png"; path = "../app_icon@2x.png"; sourceTree = "<group>"; };
+		74D9561518A0A1A80088FDC4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74DB4A7D1851EB8200F8F820 /* PushDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushDelegate.h; sourceTree = "<group>"; };
 		74E94120180256CF00F03D02 /* ResponseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseDelegate.h; sourceTree = "<group>"; };
 		74EA6F1718031F5600249B58 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		74F144C21801B54600FBC10B = {
 			isa = PBXGroup;
 			children = (
+				74D9561518A0A1A80088FDC4 /* Default-568h@2x.png */,
 				74F144D41801B54600FBC10B /* MDM Agent */,
 				74F144F21801B54700FBC10B /* MDM AgentTests */,
 				74F144CD1801B54600FBC10B /* Frameworks */,
@@ -345,6 +348,7 @@
 				7435FEAA1802E17300317D52 /* Endpoints.plist in Resources */,
 				7494A6A11803BE9200B1224A /* WebViewController.xib in Resources */,
 				7494A6A31803BFB400B1224A /* WebViewController_iPad.xib in Resources */,
+				74D9561618A0A1A80088FDC4 /* Default-568h@2x.png in Resources */,
 				749A066818055A3E00DF8C27 /* app_icon.png in Resources */,
 				749A066A18055A4100DF8C27 /* app_icon@2x.png in Resources */,
 				7493CE22182A9E8A00600F36 /* ic_logo.png in Resources */,
