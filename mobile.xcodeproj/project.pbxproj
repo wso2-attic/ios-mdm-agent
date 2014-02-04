@@ -14,7 +14,6 @@
 		7435FEAA1802E17300317D52 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7435FEA91802E17300317D52 /* Endpoints.plist */; };
 		7493CE1F182A8D4700600F36 /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493CE1E182A8D4700600F36 /* ResponseObject.m */; };
 		7493CE22182A9E8A00600F36 /* ic_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7493CE21182A9E8A00600F36 /* ic_logo.png */; };
-		7493CE24182B9BEB00600F36 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D2F2101806678100C66F9B /* Default-568h@2x.png */; };
 		7494A69C1803AE0400B1224A /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7494A69B1803AE0400B1224A /* Settings.m */; };
 		7494A6A01803BE9200B1224A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7494A69E1803BE9100B1224A /* WebViewController.m */; };
 		7494A6A11803BE9200B1224A /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7494A69F1803BE9100B1224A /* WebViewController.xib */; };
@@ -74,9 +73,6 @@
 		7494A6A41803C5D700B1224A /* RegisterDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterDelegate.h; sourceTree = "<group>"; };
 		749A066718055A3D00DF8C27 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = ../app_icon.png; sourceTree = "<group>"; };
 		749A066918055A4100DF8C27 /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app_icon@2x.png"; path = "../app_icon@2x.png"; sourceTree = "<group>"; };
-		74D2F20C1806677800C66F9B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		74D2F20E1806677C00C66F9B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		74D2F2101806678100C66F9B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		74DB4A7D1851EB8200F8F820 /* PushDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushDelegate.h; sourceTree = "<group>"; };
 		74E94120180256CF00F03D02 /* ResponseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseDelegate.h; sourceTree = "<group>"; };
 		74EA6F1718031F5600249B58 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
@@ -246,9 +242,6 @@
 				74F144DC1801B54600FBC10B /* mobile-Prefix.pch */,
 				749A066918055A4100DF8C27 /* app_icon@2x.png */,
 				749A066718055A3D00DF8C27 /* app_icon.png */,
-				74D2F2101806678100C66F9B /* Default-568h@2x.png */,
-				74D2F20E1806677C00C66F9B /* Default@2x.png */,
-				74D2F20C1806677800C66F9B /* Default.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -355,7 +348,6 @@
 				749A066818055A3E00DF8C27 /* app_icon.png in Resources */,
 				749A066A18055A4100DF8C27 /* app_icon@2x.png in Resources */,
 				7493CE22182A9E8A00600F36 /* ic_logo.png in Resources */,
-				7493CE24182B9BEB00600F36 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>Information</key>
-	<string>This is the Liense agreement statment. This is a sample test that will be view in the Text View.. This is a test application for the time being.</string>
+	<string>This is the Liense agreement statment.</string>
 	<key>Server_url</key>
-	<string>192168.18.57</string>
+	<string></string>
 </dict>
 </plist>
